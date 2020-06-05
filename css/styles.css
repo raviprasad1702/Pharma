@@ -1,0 +1,24 @@
+body {
+  font-family: "Heebo", sans-serif;
+  background: linear-gradient(45deg, #0f0c29, #302b63);
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(45deg, #0f0c29, #302b63);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+}
+
+body .autocomplete-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+body .autocomplete-list div {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+body footer {
+  width: 100%;
+}
+/*# sourceMappingURL=styles.css.map */
