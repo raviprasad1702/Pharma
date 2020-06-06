@@ -20,6 +20,8 @@ const agencyListSearch = async (searchText) => {
   outputList(matches);
 };
 
+//Html output as autocomplete
+
 const outputList = (matches) => {
   if (matches.length > 0) {
     const html = matches
