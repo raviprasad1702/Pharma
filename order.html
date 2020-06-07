@@ -1,90 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TailWind CSS</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Oswald:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
     <header class="text-gray-700 body-font bg-white">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg> -->
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+      >
+        <a
+          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+        >
+          <svg
+            aria-hidden="true"
+            class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-lg"
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512"
+          >
+            <path
+              d="M360 0H24C10.8 0 0 10.8 0 24v48c0 13.2 10.8 24 24 24h336c13.2 0 24-10.8 24-24V24c0-13.2-10.8-24-24-24zM32 480c0 17.6 14.4 32 32 32h256c17.6 0 32-14.4 32-32V128H32v352zm64-184c0-4.4 3.6-8 8-8h56v-56c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v56h56c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8h-56v56c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-56h-56c-4.4 0-8-3.6-8-8v-48z"
+            ></path>
+          </svg>
+          <span class="ml-3 text-xl">Venkata Nagasai Medicals</span>
+        </a>
+        <nav
+          class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+        >
+          <a
+            href="/"
+            class="mr-5 text-gray-900 border-b-2 border-transparent hover:border-gray-900"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="mr-5 text-gray-900 border-b-2 border-transparent hover:border-gray-900"
+            >About</a
+          >
+          <a
+            href="#"
+            class="mr-5 text-gray-900 border-b-2 border-transparent hover:border-gray-900"
+            >Contact</a
+          >
+        </nav>
+        <button
+          class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0"
+        >
+          Button
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-4 h-4 ml-1"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
 
-            <svg aria-hidden="true" class="w-10 h-10 text-white p-2 bg-indigo-500  rounded-lg"  fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M360 0H24C10.8 0 0 10.8 0 24v48c0 13.2 10.8 24 24 24h336c13.2 0 24-10.8 24-24V24c0-13.2-10.8-24-24-24zM32 480c0 17.6 14.4 32 32 32h256c17.6 0 32-14.4 32-32V128H32v352zm64-184c0-4.4 3.6-8 8-8h56v-56c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v56h56c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8h-56v56c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-56h-56c-4.4 0-8-3.6-8-8v-48z"></path></svg>
-            <span class="ml-3 text-xl">Venkata Nagasai Medicals</span>
-          </a>
-          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a href="/" class="mr-5 text-gray-900 border-b-2 border-transparent hover:border-gray-900">Home</a>
-            <a href="#" class="mr-5 text-gray-900 border-b-2 border-transparent hover:border-gray-900" >About</a>
-            <a href="#" class="mr-5 text-gray-900 border-b-2 border-transparent hover:border-gray-900">Contact</a>
-          </nav>
-          <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Button
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </button>
-        </div>
-      </header>
+    <section class="text-gray-700 body-font">
+      <div class="container px-5 py-8 mx-auto">
+        <div class="flex flex-wrap w-full mb-20">
+          <div class="w-full mb-6 lg:mb-0">
+            <h1
+              class="sm:text-3xl text-2xl tracking-wider font-medium title-font mb-2 text-white"
+            >
+              New Order
+            </h1>
+            <div class="h-1 w-10 bg-indigo-500 rounded"></div>
+          </div>
+          <p class="py-8 text-white font-light">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex
+            recusandae atque voluptatibus necessitatibus ut, suscipit
+            consectetur ea officia harum ratione consequuntur corrupti placeat
+            assumenda neque laborum vero, totam itaque rerum.
+          </p>
 
-      <section class="text-gray-700 body-font">
-        <div class="container px-5 py-8 mx-auto">
           <div class="flex flex-wrap w-full mb-20">
-            <div class="w-full mb-6 lg:mb-0">
-              <h1 class="sm:text-3xl text-2xl tracking-wider font-medium title-font mb-2 text-white">New Order</h1>
-              <div class="h-1 w-10 bg-indigo-500 rounded"></div>
+            <div class="w-3/12 mb-6 lg:mb-0 bg-white rounded-lg">
+              <select
+                name="agency-names"
+                id="agencyList"
+                class="agency-list w-full"
+              >
+                <option value="">
+                  Select an Agency
+                </option>
+                <option value="Sri Krishna Medical Agencies">
+                  Sri Krishna Medical Agencies
+                </option>
+                <option value="Sri Bhavani Mecical Agencies">
+                  Sri Bhavani Mecical Agencies
+                </option>
+                <option value="Sudheer Medical Agencies">
+                  Sudheer Medical Agencies
+                </option>
+                <option value="Sri Saichandra Medical Agencies">
+                  Sri Saichandra Medical Agencies
+                </option>
+                <option value="S.G Medical Agencies">
+                  S.G Medical Agencies
+                </option>
+                <option value="Sree Lakshmi Medical Distributors">
+                  Sree Lakshmi Medical Distributors
+                </option>
+                <option value="Srivas Pharma">
+                  Srivas Pharma
+                </option>
+                <option value="S.L.V Medical Agencies">
+                  S.L.V Medical Agencies
+                </option>
+                <option value="Sri Vasavi Medical Distributors">
+                  Sri Vasavi Medical Distributors
+                </option>
+                <option value="Thallam Medical Agencies">
+                  Thallam Medical Agencies
+                </option>
+                <option value="Sri Ramakrishna Medical Agencies">
+                  Sri Ramakrishna Medical Agencies
+                </option>
+                <option value="Bhrathi Pharma">
+                  Bhrathi Pharma
+                </option>
+              </select>
             </div>
-            <p class="py-8 text-white font-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex recusandae atque voluptatibus necessitatibus ut, suscipit consectetur ea officia harum ratione consequuntur corrupti placeat assumenda neque laborum vero, totam itaque rerum.</p>
-
-            <div class="flex flex-wrap w-full mb-20">
-              <div class="w-1/2 mb-6 lg:mb-0 bg-white rounded-lg">
-                <input id="searchBox" class=" focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal" type="text" placeholder="Search">
-                <div class="autocomplete-list">
-                </div>
-              </div>
-            </div>
-
-          </div>
-      </section>
-
-      <footer class="text-gray-700 body-font fixed bottom-0">
-        <div class="bg-gray-200">
-          <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-            <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 tailblocks —
-              <a rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@Subbarao</a>
-            </p>
-            <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-              <a href='#' class="text-gray-500 hover:text-gray-900">
-                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                </svg>
-              </a>
-              <a href='#' class="ml-3 text-gray-500 hover:text-gray-900">
-                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                </svg>
-              </a>
-              <a href='#' class="ml-3 text-gray-500 hover:text-gray-900">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                </svg>
-              </a>
-              <a href='#' class="ml-3 text-gray-500 hover:text-gray-900">
-                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-                  <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                </svg>
-              </a>
-            </span>
           </div>
         </div>
-      </footer>
+      </div>
+    </section>
+
+    <footer class="text-gray-700 body-font fixed bottom-0">
+      <div class="bg-gray-200">
+        <div
+          class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
+        >
+          <p class="text-gray-500 text-sm text-center sm:text-left">
+            © 2020 tailblocks —
+            <a
+              rel="noopener noreferrer"
+              class="text-gray-600 ml-1"
+              target="_blank"
+              >@Subbarao</a
+            >
+          </p>
+          <span
+            class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start"
+          >
+            <a href="#" class="text-gray-500 hover:text-gray-900">
+              <svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="ml-3 text-gray-500 hover:text-gray-900">
+              <svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="ml-3 text-gray-500 hover:text-gray-900">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="ml-3 text-gray-500 hover:text-gray-900">
+              <svg
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="none"
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                ></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <script src="./js/agencies-list.js"></script>
-</body>
+  </body>
 </html>

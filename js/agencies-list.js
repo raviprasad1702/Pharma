@@ -1,39 +1,22 @@
-const searchBox = document.querySelector("#searchBox");
-const autoCompleteList = document.querySelector(".autocomplete-list");
+textfunc = (text) => {
+  if (text == null || text == "" || text == "Select an Agency") return;
+};
 
-const agencyListSearch = async (searchText) => {
-  const res = await fetch("../a-list.json");
-  const agencyListItems = await res.json();
-
-  let matches = agencyListItems.filter((item) => {
-    const regex = new RegExp(`^${searchText}`, "gi");
-    return item.name.match(regex);
+initSelect2 = () => {
+  $("#agencyList").select2({
+    placeholder: "Select an Agency",
+    templateSelection: function (data, container) {
+      $(data.element).attr("data-custom-attribute", data.customValue);
+      textfunc(data.text.trim());
+      return data.text;
+    },
   });
-
-  if (searchText.length === 0) {
-    matches = [];
-    autoCompleteList.innerHTML = "";
-  }
-
-  // console.log(matches)
-
-  outputList(matches);
 };
 
-//Html output as autocomplete
+$(document).ready(() => {
+  initSelect2();
+});
 
-const outputList = (matches) => {
-  if (matches.length > 0) {
-    const html = matches
-      .map(
-        (match) => `
-        <div> <a> ${match.name}</a></div>
-    `
-      )
-      .join("");
-
-    autoCompleteList.innerHTML = html;
-  }
-};
-
-searchBox.addEventListener("input", () => agencyListSearch(searchBox.value));
+$(window).on("resize", () => {
+  initSelect2();
+});
